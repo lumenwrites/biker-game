@@ -1,0 +1,42 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Levels/spritesheets/theme0.png" type="Texture" id=1]
+[ext_resource path="res://Player/Biker.tscn" type="PackedScene" id=2]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="BG" type="Node2D" parent="."]
+editor/display_folded = true
+visible = false
+position = Vector2( 514.143, 198.318 )
+scale = Vector2( 3.19343, 3.19343 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="bg_sky" type="Sprite" parent="BG"]
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 55.1826, 0.159178, 426.043, 159.326 )
+
+[node name="bg_middle" type="Sprite" parent="BG"]
+position = Vector2( -3.66127, 79.5533 )
+scale = Vector2( 0.930078, 0.930078 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0.16674, 161.246, 359.143, 103.87 )
+
+[node name="Ground" type="StaticBody2D" parent="."]
+editor/display_folded = true
+position = Vector2( 494.617, 410 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Ground"]
+polygon = PoolVector2Array( -494.617, 50.252, -244.617, 50.252, -214.617, 40.252, -184.617, 20.252, -164.617, 0.252014, -144.617, -9.74799, -124.617, -9.74799, -104.617, 0.252014, -84.617, 20.252, -54.617, 40.252, -24.617, 50.252, 95.383, 50.252, 125.383, 40.252, 155.383, 20.252, 175.383, 0.252014, 195.383, -19.748, 215.383, -49.748, 215.383, 50.252, 285.383, 50.252, 285.383, -49.748, 305.383, -19.748, 325.383, 0.252014, 345.383, 20.252, 375.383, 40.252, 405.383, 50.252, 545.383, 50.252, 545.383, 220.252, -494.617, 220.252 )
+
+[node name="Polygon2D" type="Polygon2D" parent="Ground"]
+color = Color( 0.309804, 0.223529, 0.0745098, 1 )
+texture_offset = Vector2( 0, 1700 )
+polygon = PoolVector2Array( -494.617, 50.252, -244.617, 50.252, -214.617, 40.252, -184.617, 20.252, -164.617, 0.252014, -144.617, -9.74799, -124.617, -9.74799, -104.617, 0.252014, -84.617, 20.252, -54.617, 40.252, -24.617, 50.252, 95.383, 50.252, 125.383, 40.252, 155.383, 20.252, 185.383, -9.74799, 215.383, -49.748, 215.383, 50.252, 285.383, 50.252, 285.383, -49.748, 315.383, -9.74799, 345.383, 20.252, 375.383, 40.252, 405.383, 50.252, 545.383, 50.252, 545.383, 220.252, -494.617, 220.252 )
+
+[node name="Biker" parent="." instance=ExtResource( 2 )]
+position = Vector2( 70, 240 )
